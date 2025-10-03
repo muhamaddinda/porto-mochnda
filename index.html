@@ -31,11 +31,13 @@
     h3 { font-weight: 600; margin-bottom: 1rem; color: #0d6efd; }
     p.lead { font-size: 1.25rem; font-weight: 300; color: #555; }
 
+    /* Header */
     header { background: #fff; box-shadow: 0 4px 12px rgb(0 0 0 / 0.08); padding: 1rem 0; position: sticky; top: 0; z-index: 1030; }
     .navbar-brand { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 1.75rem; color: #0d6efd; letter-spacing: 0.1em; }
     .navbar-nav .nav-link { font-weight: 600; color: #555; transition: color 0.3s ease; letter-spacing: 0.05em; }
     .navbar-nav .nav-link:hover, .navbar-nav .nav-link.active { color: #0d6efd; }
 
+    /* Hero */
     .hero {
       background: #fff; border-radius: 1rem; padding: 5rem 3rem;
       box-shadow: 0 8px 30px rgb(13 110 253 / 0.1); margin-bottom: 4rem;
@@ -43,21 +45,41 @@
     .hero h1 span { color: #0d6efd; font-weight: 700; }
     .hero img { border-radius: 1rem; box-shadow: 0 10px 30px rgb(0 0 0 / 0.1); max-height: 400px; object-fit: cover; width: 100%; }
 
-    #about { margin-bottom: 5rem; }
-    #about p { font-size: 1.1rem; color: #555; max-width: 700px; }
+     /* About */
+     #about {
+      margin-bottom: 5rem;
+    }
+    #about p {
+      font-size: 1.1rem;
+      color: #555;
+      max-width: 700px;
+    }
     #about .skills-experience {
       margin-top: 3rem;
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 3rem;
     }
-    #about h3 { margin-bottom: 1rem; }
-    #about ul { list-style: none; padding-left: 0; color: #666; font-weight: 500; }
+    #about h3 {
+      margin-bottom: 1rem;
+    }
+    #about ul {
+      list-style: none;
+      padding-left: 0;
+      color: #666;
+      font-weight: 500;
+    }
     #about ul li::before {
-      content: "•"; color: #0d6efd; font-weight: 700;
-      display: inline-block; width: 1em; margin-left: -1em; margin-right: 0.5em;
+      content: "•";
+      color: #0d6efd;
+      font-weight: 700;
+      display: inline-block;
+      width: 1em;
+      margin-left: -1em;
+      margin-right: 0.5em;
     }
 
+    /* Portfolio */
     #portfolio { margin-bottom: 5rem; }
     .portfolio-filters { margin-bottom: 2rem; text-align: center; }
     .portfolio-filters button {
@@ -69,11 +91,28 @@
       background: #0d6efd; color: #fff; box-shadow: 0 6px 15px rgb(13 110 253 / 0.3);
     }
 
-    .portfolio-container { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; }
-    .portfolio-item { flex: 0 0 auto; width: 350px; background: transparent; text-align: center; }
-    .portfolio-item img, .portfolio-item iframe { width: 100%; aspect-ratio: 16/9; object-fit: cover; border-radius: 0.5rem; }
+    .portfolio-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+    }
+    .portfolio-item {
+      flex: 0 0 auto;
+      width: 350px;
+      background: transparent;
+      text-align: center;
+    }
+    .portfolio-item img, .portfolio-item iframe {
+      width: 100%; aspect-ratio: 16/9;
+      object-fit: cover; border-radius: 0.5rem;
+    }
 
-    .portfolio-container.centered { justify-content: center; }
+    .portfolio-container.centered {
+      justify-content: center;
+    }
+
+    /* Contact */
     #contact h2 { margin-bottom: 1.5rem; }
   </style>
 </head>
@@ -119,11 +158,41 @@
     </section>
  
     <!-- ABOUT -->
-    <!-- (sama persis kayak punyamu, tidak diubah) -->
+    <section id="about">
+      <h2>Tentang Saya</h2>
+      <p>Saya <strong>Muhamad Dinda</strong>, seorang freelance photographer, videographer, sekaligus drone pilot berbasis di Subang. Dengan latar belakang fotografi, videografi sinematik, serta aerial cinematography, saya berfokus pada visual storytelling yang kuat, estetik, dan bermakna.</p>
+      <p>Setiap karya saya dibangun dengan prinsip kualitas, konsistensi warna, dan efisiensi produksi — menghadirkan hasil visual yang indah sekaligus bercerita.</p>
+
+      <div class="skills-experience">
+        <div>
+          <h3>Keahlian</h3>
+          <ul>
+            <li>Photography (Wedding, Event, Product)</li>
+            <li>Videography (Cinematic, Company Profile)</li>
+            <li>Drone Pilot (Aerial Footage & Streaming)</li>
+            <li>Photo Editing & Color Grading</li>
+            <li>Video Editing & Motion Graphic</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Pengalaman Profesional</h3>
+          <ul>
+            <li>Wedding & Engagement Photographer/Videographer — <strong>Hiddi.Story</strong></li>
+            <li>Cinematic Wedding Videographer — <strong>Claritty.Photo</strong></li>
+            <li>Studio Photographer — <strong>Harvest Studio</strong></li>
+            <li>Streaming Cameraman — <strong>Nzhee Production</strong></li>
+            <li>Drone Pilot Streaming — <strong>Nzhee Production</strong></li>
+            <li>Event Documentation — <strong>Hover</strong></li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
     <!-- PORTFOLIO -->
     <section id="portfolio">
-      <div class="text-center mb-4"><h2>Portfolio</h2></div>
+      <div class="text-center mb-4">
+        <h2>Portfolio</h2>
+      </div>
 
       <div class="portfolio-filters">
         <button class="active" data-filter="all" type="button">All</button>
@@ -136,11 +205,8 @@
         <!-- PHOTO -->
         <div class="portfolio-item photo">
           <div id="photoCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3500">
-            <div class="carousel-inner">
-              <div class="carousel-item active"><img src="photos/photo1.jpg" class="d-block w-100" style="height:200px;object-fit:cover;" alt="Photo 1"></div>
-              <div class="carousel-item"><img src="photos/photo2.jpg" class="d-block w-100" style="height:200px;object-fit:cover;" alt="Photo 2"></div>
-              <div class="carousel-item"><img src="photos/photo3.jpg" class="d-block w-100" style="height:200px;object-fit:cover;" alt="Photo 3"></div>
-            </div>
+            <div class="carousel-inner" id="carouselInner"></div>
+            <!-- Tombol panah -->
             <button class="carousel-control-prev" type="button" data-bs-target="#photoCarousel" data-bs-slide="prev">
               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
               <span class="visually-hidden">Previous</span>
@@ -154,23 +220,91 @@
 
         <!-- VIDEO -->
         <div class="portfolio-item video">
-          <iframe src="https://www.youtube.com/embed/5uHP1IqQGmQ" frameborder="0" allowfullscreen></iframe>
+          <iframe src="https://www.youtube.com/embed/5uHP1IqQGmQ?si=FzVrnbUBbQFSK2AB" title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
 
         <!-- DRONE -->
         <div class="portfolio-item drone">
-          <iframe src="https://www.youtube.com/embed/CWI4ahORcFI" frameborder="0" allowfullscreen></iframe>
+          <iframe src="https://www.youtube.com/embed/CWI4ahORcFI?si=B1Z9Mb8x_dr--DTR" title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
       </div>
     </section>
 
     <!-- CONTACT -->
-    <!-- (bagian Contact tetap sama persis kayak punyamu) -->
-
+    <section id="contact" class="my-5">
+      <div class="row g-5">
+        <div class="col-md-5">
+          <h2>Contact</h2>
+          <p>
+            Untuk booking, kolaborasi, atau request quote — hubungi saya lewat WhatsApp atau email,
+            atau isi form di samping.
+          </p>
+          <ul>
+            <li><strong>WhatsApp:</strong><br>
+              <a href="https://wa.me/62882000075852" target="_blank">+62 882-0000-75852</a></li>
+            <li><strong>Email:</strong><br>
+              <a href="mailto:muhamaddinda45@gmail.com">muhamaddinda45@gmail.com</a></li>
+            <li><strong>Lokasi:</strong><br>Subang, Jawa Barat, Indonesia</li>
+          </ul>
+          <div class="social-links mt-4">
+            <a href="https://www.instagram.com/moch.ndaa/" target="_blank">Instagram</a> |
+            <a href="https://www.tiktok.com/@lavenderphotostory" target="_blank">TikTok</a>
+          </div>
+        </div>
+        <div class="col-md-7">
+          <form id="waForm">
+            <div class="mb-3">
+              <label for="nama" class="form-label">Nama Lengkap</label>
+              <input type="text" class="form-control" id="nama" name="nama" required>
+            </div>
+            <div class="mb-3">
+              <label for="kontak" class="form-label">WhatsApp</label>
+              <input type="text" class="form-control" id="kontak" name="kontak" required>
+            </div>
+            <div class="mb-3">
+              <label for="layanan" class="form-label">Jenis Layanan</label>
+              <select class="form-select" id="layanan" name="layanan" required>
+                <option value="" disabled selected>Pilih layanan...</option>
+                <option value="Photography">Photography</option>
+                <option value="Videography">Videography</option>
+                <option value="Drone">Drone</option>
+                <option value="Lainnya">Lainnya</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label for="pesan" class="form-label">Pesan / Detail Booking</label>
+              <textarea class="form-control" id="pesan" name="pesan" rows="5" required></textarea>
+            </div>
+            <div class="d-flex gap-2">
+              <button type="submit" class="btn btn-success">Kirim via WhatsApp</button>
+              <button type="reset" class="btn btn-outline-secondary">Reset</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
   </main>
 
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Carousel JS -->
+  <script>
+    const photos = [
+      "photos/photo1.jpg",
+      "photos/photo2.jpg",
+      "photos/photo3.jpg"
+    ];
+    const container = document.getElementById("carouselInner");
+    photos.forEach((src, i) => {
+      const div = document.createElement("div");
+      div.className = "carousel-item" + (i === 0 ? " active" : "");
+      div.innerHTML = `<img src="${src}" class="d-block w-100" style="height:200px;object-fit:cover;" alt="Photo ${i+1}">`;
+      container.appendChild(div);
+    });
+  </script>
 
   <!-- WhatsApp Form -->
   <script>
