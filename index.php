@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Muhamad Dinda — Portfolio | Photographer · Videographer · Drone Pilot</title>
+  <meta name="description" content="Portfolio Muhamad Dinda — freelance photographer, videographer, drone pilot. Karya foto & video profesional." />
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet" />
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #fafafa;
+      color: #333;
+      line-height: 1.6;
+    }
+    h1, h2, h3, h4, h5 {
+      font-family: 'Playfair Display', serif;
+      color: #1a1a1a;
+    }
+    h1 { font-weight: 700; font-size: 3rem; letter-spacing: 0.05em; }
+    h2 {
+      font-weight: 700; font-size: 2.25rem; margin-bottom: 1rem;
+      border-bottom: 3px solid #0d6efd; padding-bottom: 0.3rem; max-width: max-content;
+    }
+    h3 { font-weight: 600; margin-bottom: 1rem; color: #0d6efd; }
+    p.lead { font-size: 1.25rem; font-weight: 300; color: #555; }
+
+    /* Header */
+    header { background: #fff; box-shadow: 0 4px 12px rgb(0 0 0 / 0.08); padding: 1rem 0; position: sticky; top: 0; z-index: 1030; }
+    .navbar-brand { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 1.75rem; color: #0d6efd; letter-spacing: 0.1em; }
+    .navbar-nav .nav-link { font-weight: 600; color: #555; transition: color 0.3s ease; letter-spacing: 0.05em; }
+    .navbar-nav .nav-link:hover, .navbar-nav .nav-link.active { color: #0d6efd; }
+
+    /* Hero */
+    .hero {
+      background: #fff; border-radius: 1rem; padding: 5rem 3rem;
+      box-shadow: 0 8px 30px rgb(13 110 253 / 0.1); margin-bottom: 4rem;
+    }
+    .hero h1 span { color: #0d6efd; font-weight: 700; }
+    .hero img { border-radius: 1rem; box-shadow: 0 10px 30px rgb(0 0 0 / 0.1); max-height: 400px; object-fit: cover; width: 100%; }
+
+     /* About */
+     #about {
+      margin-bottom: 5rem;
+    }
+    #about p {
+      font-size: 1.1rem;
+      color: #555;
+      max-width: 700px;
+    }
+    #about .skills-experience {
+      margin-top: 3rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 3rem;
+    }
+    #about h3 {
+      margin-bottom: 1rem;
+    }
+    #about ul {
+      list-style: none;
+      padding-left: 0;
+      color: #666;
+      font-weight: 500;
+    }
+    #about ul li::before {
+      content: "•";
+      color: #0d6efd;
+      font-weight: 700;
+      display: inline-block;
+      width: 1em;
+      margin-left: -1em;
+      margin-right: 0.5em;
+    }
+
+    /* Portfolio */
+    #portfolio { margin-bottom: 5rem; }
+    .portfolio-filters { margin-bottom: 2rem; text-align: center; }
+    .portfolio-filters button {
+      margin: 0 0.5rem 0.5rem 0.5rem; padding: 0.5rem 1.5rem; font-weight: 600;
+      border-radius: 50px; border: 2px solid #0d6efd; background: transparent; color: #0d6efd;
+      transition: all 0.3s ease; cursor: pointer; user-select: none;
+    }
+    .portfolio-filters button.active, .portfolio-filters button:hover {
+      background: #0d6efd; color: #fff; box-shadow: 0 6px 15px rgb(13 110 253 / 0.3);
+    }
+
+    .portfolio-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+    }
+    .portfolio-item {
+      flex: 0 0 auto;
+      width: 350px;
+      background: transparent;
+      text-align: center;
+    }
+    .portfolio-item img, .portfolio-item iframe {
+      width: 100%; aspect-ratio: 16/9;
+      object-fit: cover; border-radius: 0.5rem;
+    }
+
+    .portfolio-container.centered {
+      justify-content: center;
+    }
+
+    /* Contact */
+    #contact h2 { margin-bottom: 1.5rem; }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <nav class="navbar navbar-expand-lg container">
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <div class="brand-text d-flex flex-column">
+          <span>Muhamad Dinda</span>
+          <small class="text-muted" style="font-size: 0.85rem;">Photographer · Videographer · Drone Pilot</small>
+        </div>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav fs-6">
+          <li class="nav-item"><a class="nav-link active" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container my-5">
+
+    <!-- HERO -->
+    <section class="hero row align-items-center">
+      <div class="col-md-6">
+        <h1>Hello — saya <span>Muhamad Dinda</span></h1>
+        <p class="lead">Freelance Photographer, Videographer & Drone Pilot. Mengabadikan cerita visual yang otentik — komersial, event, dan sinematik.</p>
+        <div class="mt-4">
+          <a href="#portfolio" class="btn btn-primary me-3">Lihat Portfolio</a>
+          <a href="#contact" class="btn btn-outline-primary">Hubungi Saya</a>
+        </div>
+      </div>
+      <div class="col-md-6 text-center mt-4 mt-md-0">
+        <img src="dinda.jpg" alt="Contoh fotografi - landscape" />
+      </div>
+    </section>
+ 
+    <!-- ABOUT -->
+    <section id="about">
+      <h2>Tentang Saya</h2>
+      <p>Saya <strong>Muhamad Dinda</strong>, seorang freelance photographer, videographer, sekaligus drone pilot berbasis di Subang. Dengan latar belakang fotografi, videografi sinematik, serta aerial cinematography, saya berfokus pada visual storytelling yang kuat, estetik, dan bermakna.</p>
+      <p>Setiap karya saya dibangun dengan prinsip kualitas, konsistensi warna, dan efisiensi produksi — menghadirkan hasil visual yang indah sekaligus bercerita.</p>
+
+      <div class="skills-experience">
+        <div>
+          <h3>Keahlian</h3>
+          <ul>
+            <li>Photography (Wedding, Event, Product)</li>
+            <li>Videography (Cinematic, Company Profile)</li>
+            <li>Drone Pilot (Aerial Footage & Streaming)</li>
+            <li>Photo Editing & Color Grading</li>
+            <li>Video Editing & Motion Graphic</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Pengalaman Profesional</h3>
+          <ul>
+            <li>Wedding & Engagement Photographer/Videographer — <strong>Hiddi.Story</strong></li>
+            <li>Cinematic Wedding Videographer — <strong>Claritty.Photo</strong></li>
+            <li>Studio Photographer — <strong>Harvest Studio</strong></li>
+            <li>Streaming Cameraman — <strong>Nzhee Production</strong></li>
+            <li>Drone Pilot Streaming — <strong>Nzhee Production</strong></li>
+            <li>Event Documentation — <strong>Hover</strong></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- PORTFOLIO -->
+    <section id="portfolio">
+      <div class="text-center mb-4">
+        <h2>Portfolio</h2>
+      </div>
+
+      <div class="portfolio-filters">
+        <button class="active" data-filter="all" type="button">All</button>
+        <button data-filter="photo" type="button">Photo</button>
+        <button data-filter="video" type="button">Video</button>
+        <button data-filter="drone" type="button">Drone</button>
+      </div>
+
+      <div class="portfolio-container">
+        <!-- PHOTO -->
+        <div class="portfolio-item photo">
+          <div id="photoCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3500">
+            <div class="carousel-inner">
+              <?php
+              $photos = glob("photos/*.{jpg,jpeg,png}", GLOB_BRACE);
+              if ($photos) {
+                foreach ($photos as $i => $photo) {
+                  $active = $i === 0 ? "active" : "";
+                  echo "<div class='carousel-item $active'>
+                          <img src='$photo' class='d-block w-100' style='height:200px;object-fit:cover;' alt='Photo ".($i+1)."'>
+                        </div>";
+                }
+              } else {
+                echo "<p class='text-muted'>Foto tidak tersedia.</p>";
+              }
+              ?>
+            </div>
+            <!-- Tombol panah -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#photoCarousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#photoCarousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- VIDEO -->
+        <div class="portfolio-item video">
+          <iframe src="https://www.youtube.com/embed/5uHP1IqQGmQ?si=FzVrnbUBbQFSK2AB" title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+
+        <!-- DRONE -->
+        <div class="portfolio-item drone">
+          <iframe src="https://www.youtube.com/embed/CWI4ahORcFI?si=B1Z9Mb8x_dr--DTR" title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </div>
+    </section>
+
+   
+  
+ <!-- CONTACT -->
+ <section id="contact" class="my-5">
+      <div class="row g-5">
+        <div class="col-md-5">
+          <h2>Contact</h2>
+          <p>
+            Untuk booking, kolaborasi, atau request quote — hubungi saya lewat WhatsApp atau email,
+            atau isi form di samping.
+          </p>
+          <ul>
+            <li><strong>WhatsApp:</strong><br>
+              <a href="https://wa.me/62882000075852" target="_blank">+62 882-0000-75852</a></li>
+            <li><strong>Email:</strong><br>
+              <a href="mailto:muhamaddinda45@gmail.com">muhamaddinda45@gmail.com</a></li>
+            <li><strong>Lokasi:</strong><br>Subang, Jawa Barat, Indonesia</li>
+          </ul>
+          <div class="social-links mt-4">
+            <a href="https://www.instagram.com/moch.ndaa/" target="_blank">Instagram</a> |
+            <a href="https://www.tiktok.com/@lavenderphotostory" target="_blank">TikTok</a>
+          </div>
+        </div>
+        <div class="col-md-7">
+          <form id="waForm">
+            <div class="mb-3">
+              <label for="nama" class="form-label">Nama Lengkap</label>
+              <input type="text" class="form-control" id="nama" name="nama" required>
+            </div>
+            <div class="mb-3">
+              <label for="kontak" class="form-label">WhatsApp</label>
+              <input type="text" class="form-control" id="kontak" name="kontak" required>
+            </div>
+            <div class="mb-3">
+              <label for="layanan" class="form-label">Jenis Layanan</label>
+              <select class="form-select" id="layanan" name="layanan" required>
+                <option value="" disabled selected>Pilih layanan...</option>
+                <option value="Photography">Photography</option>
+                <option value="Videography">Videography</option>
+                <option value="Drone">Drone</option>
+                <option value="Lainnya">Lainnya</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label for="pesan" class="form-label">Pesan / Detail Booking</label>
+              <textarea class="form-control" id="pesan" name="pesan" rows="5" required></textarea>
+            </div>
+            <div class="d-flex gap-2">
+              <button type="submit" class="btn btn-success">Kirim via WhatsApp</button>
+              <button type="reset" class="btn btn-outline-secondary">Reset</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- WhatsApp Form -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const contactForm = document.getElementById("waForm");
+      if (contactForm) {
+        contactForm.addEventListener("submit", function (e) {
+          e.preventDefault();
+          const nama = document.getElementById("nama").value.trim();
+          const kontak = document.getElementById("kontak").value.trim();
+          const layanan = document.getElementById("layanan").value;
+          const pesan = document.getElementById("pesan").value.trim();
+
+          if (!nama || !kontak || !layanan || !pesan) {
+            alert("Harap isi semua field sebelum mengirim!");
+            return;
+          }
+
+          const whatsappNumber = "62882000075852";
+          const text = `Halo, saya ${nama}.%0A No. WhatsApp: ${kontak}%0A Layanan: ${layanan}%0A%0A Pesan:%0A${pesan}`;
+          const url = `https://wa.me/${whatsappNumber}?text=${text}`;
+          window.open(url, "_blank");
+        });
+      }
+    });
+  </script>
+</body>
+</html>
